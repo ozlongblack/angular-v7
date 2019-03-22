@@ -9,8 +9,14 @@
       "core/*": [
         "app/core/*"
       ],
+      "environments": [
+        "environments"
+      ],
       "material": [
         "app/material/index.ts"
+      ],
+      "models": [
+        "app/models/index.ts"
       ],
       "shared": [
         "app/shared/index.ts"
@@ -22,7 +28,6 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

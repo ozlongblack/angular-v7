@@ -1,14 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { Store } from './services';
 
 @NgModule({
   imports: [
     CommonModule,
   ],
-  providers: [
-    Store,
-  ],
+  providers: [],
 })
 
 export class CoreModule {

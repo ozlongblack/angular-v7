@@ -4,7 +4,14 @@ import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from 'material';
 import { SidenavComponent } from 'shared/components';
-import { SidenavService } from 'shared/services';
+import {
+  SidenavService,
+  Store,
+} from 'shared/services';
+import {
+  FooterComponent,
+  HeaderComponent,
+} from './components';
 
 @NgModule({
   imports: [
@@ -14,12 +21,17 @@ import { SidenavService } from 'shared/services';
   ],
   providers: [
     SidenavService,
+    Store,
   ],
   exports: [
+    FooterComponent,
+    HeaderComponent,
     MaterialModule,
     SidenavComponent,
   ],
   declarations: [
+    FooterComponent,
+    HeaderComponent,
     SidenavComponent,
   ],
   entryComponents: [],

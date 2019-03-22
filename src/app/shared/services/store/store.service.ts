@@ -1,6 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 import { Input } from '@angular/core';
-import { StoreEvent } from 'app/core/services/store/store.events';
+import { StoreEvent } from 'app/shared/services/store/store.events';
 
 export class Store {
   @Input()

@@ -6,6 +6,7 @@ import {
   ActivatedRoute,
   Router,
 } from '@angular/router';
+import { takeUntil } from 'rxjs/operators';
 
 import { Unsubscribe } from 'shared/components';
 import { SidenavService } from 'shared/services';
@@ -17,6 +18,7 @@ import { SidenavService } from 'shared/services';
 export class HomeComponent extends Unsubscribe implements OnInit {
   title = '';
   isChild = false;
+  sidenavState = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -52,5 +54,11 @@ export class HomeComponent extends Unsubscribe implements OnInit {
   }
 
   ngOnInit() {
+    this.sidenavService.change
+      .pipe(takeUntil(this.unsubscribe))
+      .subscribe((opened) => {
+        console.log(opened);
+        this.sidenavState = opened;
+      });
   }
 }

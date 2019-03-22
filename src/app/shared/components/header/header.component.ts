@@ -3,6 +3,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { SidenavService } from 'shared/services';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,13 @@ export class HeaderComponent implements OnInit {
   @Input()
   isChild: boolean;
 
-  constructor() {
+  constructor(
+    private sidenavService: SidenavService,
+  ) {
+  }
+
+  click() {
+    this.sidenavService.toggle();
   }
 
   ngOnInit() {

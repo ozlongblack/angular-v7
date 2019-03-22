@@ -20,21 +20,6 @@
       <app-sidenav></app-sidenav>
     </div>
   </mat-sidenav>
-  <mat-sidenav
-    *ngIf="isMobile"
-    class="searchnav"
-    mode="over"
-    position="end"
-    [opened]="searchnavState"
-  >
-    <button
-      mat-button
-      class="searchnav__close__btn"
-      (click)="toggleSearchnav()"
-    >
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-sidenav>
   <mat-sidenav-content>
     <app-header
       [title]="title"

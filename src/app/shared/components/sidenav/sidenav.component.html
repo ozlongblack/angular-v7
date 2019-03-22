@@ -1,0 +1,88 @@
+<mat-nav-list
+  class="sidenav__list"
+>
+  <mat-list-item
+    *ngIf="auth.userHasScopes([scopes.planning.read])"
+    class="sidenav__list-item"
+    routerLink="/order-planner"
+    routerLinkActive="active"
+    queryParamsHandling="merge"
+    (click)="close()"
+  >
+    Order Planner
+  </mat-list-item>
+  <mat-divider
+    *ngIf="auth.userHasScopes([scopes.planning.read])"
+  ></mat-divider>
+  <mat-list-item
+    *ngIf="auth.userHasScopes([scopes.stockadj.read])"
+    class="sidenav__list-item"
+    routerLink="/stock-adjustment"
+    routerLinkActive="active"
+    queryParamsHandling="merge"
+    (click)="close()"
+  >
+    Stock adjustment
+  </mat-list-item>
+  <mat-divider
+    *ngIf="auth.userHasScopes([scopes.stockadj.read])"
+  ></mat-divider>
+  <mat-list-item
+    *ngIf="auth.userHasScopes([scopes.delivery.read])"
+    class="sidenav__list-item"
+    routerLink="/delivery"
+    routerLinkActive="active"
+    queryParamsHandling="merge"
+    (click)="close()"
+  >
+    Delivery
+  </mat-list-item>
+  <mat-divider
+    *ngIf="auth.userHasScopes([scopes.delivery.read])"
+  ></mat-divider>
+  <mat-list-item
+    *ngIf="auth.userHasScopes([scopes.performance.read])"
+    class="sidenav__list-item"
+    routerLink="/performance"
+    routerLinkActive="active"
+    queryParamsHandling="merge"
+    (click)="close()"
+  >
+    Performance
+  </mat-list-item>
+  <mat-divider
+    *ngIf="auth.userHasScopes([scopes.performance.read])"
+  ></mat-divider>
+  <mat-list-item
+    *ngIf="auth.userHasScopes([scopes.userManagement.read])"
+    class="sidenav__list-item"
+    routerLink="/user-management"
+    routerLinkActive="active"
+    queryParamsHandling="merge"
+    (click)="close()"
+  >
+    User management
+  </mat-list-item>
+  <mat-divider
+    *ngIf="auth.userHasScopes([scopes.userManagement.read])"
+  ></mat-divider>
+  <mat-list-item
+    *ngIf="auth.userHasScopes([scopes.companyManagement.read])"
+    class="sidenav__list-item"
+    routerLink="/company-management"
+    routerLinkActive="active"
+    queryParamsHandling="merge"
+    (click)="close()"
+  >
+    Company management
+  </mat-list-item>
+  <mat-divider
+    *ngIf="auth.userHasScopes([scopes.companyManagement.read])"
+  ></mat-divider>
+  <mat-list-item
+    routerLink="."
+    (click)="logout()"
+  >
+    Log out
+  </mat-list-item>
+</mat-nav-list>

@@ -1,7 +1,24 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "core": [
+        "app/core/index.ts"
+      ],
+      "core/*": [
+        "app/core/*"
+      ],
+      "material": [
+        "app/material/index.ts"
+      ],
+      "shared": [
+        "app/shared/index.ts"
+      ],
+      "shared/*": [
+        "app/shared/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
